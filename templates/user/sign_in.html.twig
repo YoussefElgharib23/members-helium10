@@ -1,0 +1,189 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    
+    <!-- Simple splash screen-->
+    <div class="splash">
+        <div class="splash__logo">
+            <div class="splash__logo__block1"></div>
+            <div class="splash__logo__block2"></div>
+            <div class="splash__logo__block3"></div>
+            <div class="splash__logo__block4"></div>
+            <div class="splash__logo__block5"></div>
+            <div class="splash__logo__block6"></div>
+        </div>
+    </div>
+    <!--[if lt IE 7]>
+    <p class="alert alert-danger">You are using an <strong>outdated</strong> browser. Please <a
+            href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    
+    <div class="content">
+        
+        
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="login-form-wrapper">
+                    <div class="login-form-wrapper__logo">
+                        <a href="https://www.helium10.com/">
+                            <img src="https://members.helium10.com/images/new-logo/2-colors-light-bg.svg"
+                                 alt="Helium 10">
+                        </a>
+                    </div>
+                    <h3 class="login-form-wrapper__title">Log In to Helium 10</h3>
+                    
+                    <form id="login-form" class="login-form" action="{{ app.request.uri }}"
+                          method="post">
+                        <input type="hidden" name="_csrf"
+                               value="nIerJoGFiWnPj__cJ7yh_qxxAiqi3Ic8Niuo0U366g_mv8N508LwXZfHlb5S-M6U30J2WI_s7UVbT8KzPriPWg==">
+                        
+                        <div class="form-group field-loginform-email required">
+                            <label for="loginform-email">Email</label>
+                            <input type="text" id="loginform-email" class="form-control" name="LoginForm[email]"
+                                   placeholder="Please enter your email" required="true" aria-required="true">
+                            
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="form-group field-loginform-password required">
+                            <label for="loginform-password">Password</label><input type="password"
+                                                                                   id="loginform-password" class="form-control" name="LoginForm[password]"
+                                                                                   placeholder="Please enter your password" aria-required="true">
+                            <div class="invalid-feedback"></div>
+                            <div class="login-form__forgot"><a href="recovery.html" tabindex="-1">Forgot password?</a>
+                            </div>
+                        </div>
+                        <div class="form-group field-loginform-recaptcha">
+                            
+                            <input type="hidden" id="loginform-recaptcha" class="form-control"
+                                   name="LoginForm[reCaptcha]">
+                            
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="form-group field-loginform-rememberme">
+                            <div class="custom-control custom-checkbox">
+                                <input type="hidden" name="LoginForm[rememberMe]" value="0"><input type="checkbox"
+                                                                                                   id="loginform-rememberme" class="custom-control-input" name="LoginForm[rememberMe]"
+                                                                                                   value="1" checked>
+                                <label class="custom-control-label" for="loginform-rememberme">Remember Me</label>
+                                <div class="invalid-feedback"></div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-secondary btn-block">Log In</button>
+                        <div class="login-form-bottom">
+                            <p class="login-form-bottom__text">New to Helium 10?
+                                <a class="login-form-bottom__link" href="signup.html">Sign Up Now</a>
+                            </p>
+                            <p class="login-form-bottom__text">Problems or questions?
+                                <a class="login-form-bottom__link"
+                                   href="https://helium10.zendesk.com/hc/en-us/requests/new" target="_blank">Contact
+                                    Us</a>
+                            </p>
+                        </div>
+                    
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            
+            <div class="footer-menu">
+                <a href="#PriModal" data-toggle="modal">Privacy Policy</a> |
+                <a href="#TermsUseModal" data-toggle="modal">Terms of Use</a> |
+                <a href="#EDModal" data-toggle="modal">Earnings Disclaimer</a> |
+                <a href="https://www.g2.com/products/helium-10/reviews#reviews" target="_blank">Submit Testimonial</a> |
+                <a href="#TRDModal" data-toggle="modal">Testimonials and Results Disclosure</a> |
+                <a href="#LegalModal" data-toggle="modal">Legal</a> |
+                <a href="https://members.helium10.com/sitemap">Site Map</a></div>
+            
+            <div class="footer-copyright">Helium 10 - Copyright 2021 - PixelLabs LLC</div>
+            
+            <div class="modal fade" id="PriModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header text-center">
+                            <h4 class="modal-title">Privacy Policy</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div id="ftc_doc_3804"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="TermsUseModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header text-center">
+                            <h4 class="modal-title">Terms of Use</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div id="ftc_doc_3805"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="EDModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header text-center">
+                            <h4 class="modal-title">Earnings Disclaimer</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div id="ftc_doc_3806"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="TRDModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <!-- temporary solution, modal body already contains 'Testimonials and Results Disclosure' -->
+                        <div class="modal-header text-center" style="display: none;">
+                            <h4 class="modal-title">Testimonials and Results Disclosure</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div id="ftc_doc_3807"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="LegalModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header text-center">
+                            <h4 class="modal-title">Legal</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div id="ftc_doc_3808"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        
+        </footer>
+    </div>
+    
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="http://www.googletagmanager.com/ns.html?id=GTM-5QPG5B" height="0" width="0"
+                style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    
+{% endblock %}
